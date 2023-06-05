@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Javascript Practice
+        </title>
+        <script>
+            alert("Hello Ashutosh") ;
+        </script>
+    </head>
+    <body>
+        <p>
+            Printed before Javascript
+        </p>
+        <script>
+            var z ;
+            z = "Hello My name is Ashutosh" ;
+            document.write(z);
+            document.write("Hello Ashutosh , Printed after Javascript is run .\n") ;
+            a = Math.sqrt(25) ;
+            b = Math.sqrt(16);
+            c = a - b ;
+            document.write(c);
+            document.write(document) ; 
+            //Let's write a function 
+            function myParagraph(myString) {
+                document.write("<p>" + myString + "</p>"); 
+            }
+            myParagraph("This is my paragraph . \n") ;
+            //Let us addd an function to add things together 
+
+            function add(a , b , c ) {
+                sum = a + b + c ; 
+                document.write("Sum is : " + sum) ;
+            }
+
+            add(1 , 3 , 4 ) ;
+
+            //Let us add a new function which has the capability to subtract two numbers 
+            //It has the capability to identify which number is greater than it will subtract 
+
+            function subtract(z , x ) {
+                if ( x > z ){
+                    var dif = x - z ; 
+                    document.write(dif) ;
+                } else {
+                    var dif = z - x ; 
+                    document.write(dif) ;
+                }
+            }
+
+            subtract(8 , 3) ;
+            subtract(2 , 5);
+
+            document.write("\n") ;
+
+            //Now we will create object and manipulate it 
+            var car = {
+                color : "red" ,
+                model : 2019 ,
+                interior : "Leather" , 
+                company : "Porsche" ,
+                type : "Super-Car"
+            }
+
+            //Now we will try to print out the different properties of car one by one 
+            document.write("Color of the car is : " + car.color + "\n") ;
+            document.write("Type of the Car is : " + car.type + "\n") ;
+            document.write("Interior of car is made up of : " + car.interior + "\n") ;
+            document.write("Model of the car is : " + car.model + "\n") ;
+            document.write("Company of the Car is : " + car.company + "\n") ;
+
+            //Now we will print the length of the car array 
+            var len = car.length ; 
+            document.write("Length of the object of Car is : " + len + "\n") ; 
+
+            //Now we will create an array ; 
+            var list = new Array(10) ; 
+
+            list[0] = "Ashutosh" ;
+            list[1] = "TZX" ;
+            list[2] = "Development" ;
+            list[3] = "Tesla" ;
+            list[4] = "Mass" ;
+            list[5] = "Manufacture" ; 
+            list[6] ="Elon" ; 
+            list[7] = "SpaceX" ;
+            list[8] = "Jeff" ; 
+            list[9] = "Bill" ;
+
+            //Now we will manipulate the Array 
+            var length = list.length ; 
+            document.write("Length of The List is : " + length + "\n") ; 
+            document.write("\n") ; 
+            document.write(list[3]) ;
+
+            //Now we will try to use method of an object 
+            car.description = function() {
+                return color + 'car' + 'with model number ' + model + 'With interior made up of ' + interior + 'is a ' + type + 'made by' + company + "\n"  ;
+            }
+            //Let us manipulate the event handler 
+
+            //Get the "a" element by it's Id
+            var a = document.getElementById("myLink") ;
+
+            //Now we will define the event handler 
+            function handleclick() {
+                alert("Fuck this Planet!!") ;
+            }
+
+            //Now we will attach even handler to the "a"
+            a.onclick = handleclick() ;
+
+            //We will try to link event handler to the button
+            //We will get the button by its ID 
+            var button = document.getElementById("button") ;
+
+            button.addEventListener("DOMContentLoaded" , function() {
+                alert("Button clicked !") ;
+            }) ;
+            
+        </script>
+        <p>
+            Printed after Javascript
+        </p>
+        <a href="whatever.com" onclick="alert('Be Careful')"> Links </a>
+
+        <a href="google.com" id="myLink">google</a>
+        <button id="button">
+            Click Me ! 
+        </button>
+    </body>
+</html>

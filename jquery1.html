@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            JQuery 1 
+        </title>
+    </head>
+    <body>
+        <h1>
+            This file contains the first example code of JQuery .
+        </h1>
+        <a href="1.html">Link1</a>
+        <br>
+        <a href="2.html">Link2</a>
+        <br>
+        <a href="3.html">Link3</a>
+        <br>
+        <a href="4.html">Link5</a>
+        <br>
+        <button id="b1">
+            Button 1
+        </button>
+        <br>
+        <button id="b2">
+            Button 2 
+        </button>
+        <br>
+        <button id="b3">
+            Button 3
+        </button>
+        <br>
+        <button id="b4">
+            Button 4
+        </button>
+        <!--To Load the JQuery Script this line is used -->
+        <script src="jquery.js" type="text/javascript">
+        </script>
+        <!--Now we will add our code --->
+        <script>
+            $(document).ready(function() {
+                $("a").click(function(event) {
+                    alert("You Clicked on a link" + this.href) ;
+                });
+            });
+
+            //Now we will create a script but in a different way
+
+            $(document).ready(function() {
+                $("#b1").click(function(event){
+                    alert("You clicked the Button 1") ;
+                });
+            });
+
+            //Now we will add another event listener thorugh different methods 
+            var b2 = document.getElementById("b2") ;
+
+            //Now we will define the function
+            function name() {
+                alert("Ashutosh Sharma") ;
+            } ; 
+
+            //Now we will assign the function to the event listener
+            b2.onclick = name ; 
+
+            //Now we will add through another method 
+            var b3 = document.getElementById("b3") ; 
+
+            //Now defining the function directly to the event handler
+            b3.onclick = function(){
+                alert("Pheonix") ;
+            }
+
+            //Now we will add through DOM 
+            var b4 = document.getElementById("b4") ;
+            //Adding Eventlistner 
+            b4.addEventListener("click" , function() {
+                alert("Hi!") ;
+            });
+
+            //Now we will use DOM Selector
+
+            window.addEventListener('load' , function() {
+                var links = document.getElementsByTagName("a") ;
+
+                for(var i = 0 ; i < links.length ; i++){
+                    links[i].addEventListener('click' , function() {
+                        alert("You have clicked this link" + this.href) ;
+                    }) ; 
+                }
+            }) ;
+
+            //Now we will create a script in which the links of external websites will open in the new window
+
+            $(function(){
+                $("a").click(function(event){
+                    if ( null != this.href && this.href.length > 4 && this.href.substring(0,4) == "http") {
+                        event.preventDefault();
+                        window.open(this.href);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

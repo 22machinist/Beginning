@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="question">
+        Which country would you like to know more about ? 
+    </p>
+    <div id="country">
+        Foo
+    </div>
+    <p class="countryoption">
+        <a href="AJAX.html #uruguay">Uruguay</a>
+    </p>
+    <p class="countryoption">
+        <a href="AJAX.html #paraguay">
+            Paraguay
+        </a>
+    </p>
+    <p class="reverse">
+        <a href="#">Reverse</a>
+    </p>
+    <script src="jquery.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        $("p.reverse").click(function(event){
+            event.preventDefault() ;
+            $("#country").slideUp('slow' , function() {
+                $("#country").hide() ;
+                $("p.countryoption a").slideDown('slow') ;
+            }) ;
+        }) ;
+        $(function() {
+            $("#country").hide() ;
+
+            $("p.countryoption a").click(function(event){
+                event.preventDefault() ;
+                $("p.countryoption").fadeOut() ;
+                $("#country").load($(this).attr('href')) ;
+                $("#country").slideDown() ;
+            });
+        });
+
+        //Function to slide up the loaded data 
+        $("p.reverse").click(function(event){
+            event.preventDefault() ;
+            $("#country").slideUp('slow' , function() {
+                $("#country").hide() ;
+                $("p.countryoption").slideDown('slow') ;
+            }) ;
+        }) ;
+    </script>
+</body>
+</html>

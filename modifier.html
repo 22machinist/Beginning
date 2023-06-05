@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Link Modifier
+        </title>
+    </head>
+    <body onload="linkmodifier()">
+        <ul>
+            <li>
+                <a href="http://google.com/" id="link1">
+                    Google
+                </a>
+            </li>
+            <li>
+                <a href="http://www.nytimes.com/">
+                    New York Times
+                </a>
+            </li>
+        </ul>
+        <script type="text/javascript">
+            function linkmodifier() {
+                for (var i = 0 ; i < document.links.length ; i++){
+                    document.links[i].href = "http://example.com" ;
+                }
+            }
+
+            //Now we will create a code thst will stop google link to take another page 
+            var link1 = document.getElementById("link1") ; 
+
+            //Now we will create function 
+            function stop() {
+                alert(this.href) ; 
+                return false ; 
+            }
+            
+            //Linking the var
+            link1.onclick = stop ; 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!--
+    This File carries the code for pop up windows 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up</title>
+</head>
+<body>
+    <h1>
+        Pop Up Example 
+    </h1>
+    <p>
+        <a href="parahide.html" id="popup" onclick="popup(this.href)">
+            Launch Pop UP
+        </a>
+    </p>
+    <script src="jquery.js"></script>
+    <script type="text/JavaScript">
+        //Creating the function for pop-up windows
+        $(function(event){
+            $("#popup").onclick(function(event){
+                event.preventDefault() ; 
+            }) ;
+        });
+        function popup(url) {
+            var mywindow ; 
+            mywindow = window.open(url , 'name' , 'height = 200 , width = 400') ;
+            return false ; 
+        }
+    </script>
+</body>
+</html>

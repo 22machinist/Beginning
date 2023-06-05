@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaping the Paragraph</title>
+</head>
+<body>
+    <p id="para1">
+        I am the looser , I will never succeed . Can i ever succeed in my life ?
+    </p>
+    <p class="para2">
+        I am conqueror , I will conquer may be i had fallen today but not tomorrow . I will rise & conquer .
+    </p>
+    <script src="jquery.js"></script>
+    <script>
+        $(function() {
+            $("#para2").hide() ;
+        });
+        $(function(){
+            $("#para1").mouseenter(function(){
+                $(this).addClass("para2") ;
+            });
+            $("#para1").mouseleave(function(){
+                $(this).removeClass("para2") ;
+            }) ;
+        });
+    </script>
+</body>
+</html>

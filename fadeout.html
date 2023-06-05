@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document containing fading effect</title>
+</head>
+<body>
+    <h1>
+        This file contains the code for Fadeout() function of the JavaScript .
+    </h1>
+    <ul id="editable">
+
+    </ul>
+    <form action="" id="addElement">
+        <label for="liContent">
+            New list item : 
+            <input type="text" name="liContent" id="liContent" size="60">
+        </label>
+        <input type="submit" value="Add item">
+    </form>
+    <p>
+        <a href="#" id="clearList">Clear List</a>
+        <script src="jquery.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(function(){
+                $("clearList").click(function(event){
+                    event.preventDefault() ; 
+                    $(document).on('click' , "#editable li" , function(){
+                        $(this).fadeOut('slow' , function() {
+                            $(this).remove() ;
+                        }) ; 
+                    }) ; 
+                }) ; 
+            }) ;
+        </script>
+    </p>
+</body>
+</html>

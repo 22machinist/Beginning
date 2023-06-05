@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        Linking the CSS file 
+    -->
+    <link rel="stylesheet" href="formvalidation.css" media="screen">
+</head>
+<body>
+    <h1>
+        Registration Form 
+    </h1>
+    <p>
+        Please fill out the form below to register for our website . 
+        <br>
+        Field with bold labels are required .
+    </p>
+    <form action="/register" method="post" enctype="multipart/form-data" id="RegistrationForm">
+        <!--Field for Name -->
+        <div class="required">
+            <label for="name" class="field">
+                Name : 
+                <input type="text" name="name">
+            </label>
+        </div>
+
+        <!--Field for Gender-->
+        <div class="required">
+            <label for="gender" class="field">
+                Gender : 
+            </label>
+            <label>
+                <input type="radio" name="gender" value="male">
+                Male 
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female 
+            </label>
+        </div>
+
+        <!--Field for OS info -->
+        <div class="required">
+            <label for="" class="field" id="os">
+                Operating System 
+            </label>
+            <select name="Os" id="os">
+                <option value=""></option>
+                <option value="windows">
+                    Windows 
+                </option>
+                <option value="macos">
+                    Mac Os 
+                </option>
+                <option value="linux">
+                    Linux
+                </option>
+                <option value="others">
+                    Others . . . 
+                </option>
+            </select>
+        </div>
+
+        <!--Field for Tools info -->
+        <div class="required">
+            <label for="toys" class="field">
+                Toys 
+            </label>
+            <label>
+                <input type="checkbox" name="toy" value="digicam">Digital Camera 
+            </label>
+            <label>
+                <input type="checkbox" name="toy" value="mp3"> MP3 
+            </label>
+            <label>
+                <input type="checkbox" name="toy" value="wlan"> Wireless LAN 
+            </label>
+        </div>
+        <!--Field for Potrait -->
+        <div>
+            <label class="field">
+                Potrait 
+            </label>
+            <input type="file" name="potrait">
+        </div>
+
+        <!--Field for Mini-Biography-->
+        <div>
+            <label class="field">
+                Mini-BioGraphy 
+            </label>
+            <textarea name="biography" id="biography" cols="40" rows="8"></textarea>
+        </div>
+
+        <!--Field for submission -->
+        <div class="submit">
+            <input type="submit" value="register">
+        </div>
+    </form>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="formvalidation.js"></script>
+</body>
+</html>

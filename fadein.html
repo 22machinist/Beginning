@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        This File contains the code for specially Fade-In effect with the Fade-Up effect 
+    </h1>
+    <!--Let us firs tdefine the empty list -->
+    <ul id="editable">
+        <!--This is the list where the new items will be added -->
+    </ul>
+    <!--
+        Now We will define the form for taking the new list item inout from the user
+    -->
+    <form action="" id="addElement">
+        <label for="liContent">
+            New List item : 
+            <input type="text" id="liContent" name="liContent" size="60">
+        </label>
+        <input type="submit" value="Add Item">
+    </form>
+
+    <!--
+        Now we will add the link to clear the list 
+    -->
+    <p>
+        <a href="#" id="clearList">
+            Clear List !
+        </a>
+    </p>
+
+    <!--Now we will call JQuery Script-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <!--
+        Now we will create our own script
+    -->
+    <script type="text/javascript" >
+        //First we will create script to add the new list item with Fade-In effect 
+        $("#addElement").submit(function(event) {
+            event.preventDefault() ;
+            var content = "<li>" + $("#addElement input[name = 'liContent']").val() + "</li>" ;
+            $(content).hide().appendTo("#editable").fadeIn('slow').css("display" , "list-item") ; 
+            $("#addElement input[name= 'liContent']").val("").focus() ;
+        }) ; 
+
+        //Now we will add script to clear the list 
+        $("#clearList").click(function(event){
+            event.preventDefault() ;
+            $("#editable").slideUp('slow' , function(){
+                $("#editable").empty() ; 
+                $("#editable").show() ; 
+            }) ;
+        }) ;
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Event handler
+        </title>
+    </head>
+    <body>
+        <h1>
+            This File is created to carry the code how to make even handler work
+        </h1>
+        <ol>
+            <li>
+                <button id="b1">CLick Me !</button>
+            </li>
+            <li>
+                <button id="b2">
+                    My Name ! 
+                </button>
+            </li>
+            <li>
+                <button id="b3">
+                    Company Name
+                </button>
+            </li>
+        </ol>
+        <script>
+            //Now we will Javascript Code for event handlers One-by-one
+
+            //First we will go with b1 
+            var b1 = document.getElementById("b1") ;
+
+            //Defining the event handler function 
+            function message() {
+                alert("Button Clicked is B1 !") ;
+            } ;
+
+            //Now we will attach event handler to the button
+            b1.onclick = message ;
+
+            //Now we will add event handler to the second button with different method 
+            var b2 = document.getElementById("b2") ;
+
+            //Defining the event handler 
+            b2.onclick = function() {
+                alert("Ashutosh Sharma") ;
+            } ;
+
+            //Now we will attach event handler to the last button with another method 
+            var b3 = document.getElementById("b3") ; 
+
+            //Defining the event handler 
+            b3.addEventListener("click" , function() {
+                alert("Pheonix") ;
+            }) ;
+        </script>
+    </body>
+</html>

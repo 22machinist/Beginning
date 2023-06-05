@@ -1,0 +1,20 @@
+/*Style for all device */
+table {
+    width: 100%;
+    border: 1;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+/*Zebra stripes in the table */ 
+table tr:nth-child(2n+1) {
+    background-color: #dfdfdf;
+}
+
+/* Styles for devices larger than 650px */
+@media screen and (min-width: 651px) {
+    table {
+        background-color: aquamarine;
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,16 @@
+@media all and (min-width : 320px ) and (max-width : 800px) {
+    body {
+        background-color: aqua;
+    }
+}
+
+@media screen and (min-width : 801px) {
+    body {
+        background-color: brown;
+    }
+}
+
+body {
+    color : blue ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        This file contains the code for Slide Up function
+    </h1>
+    <!--Let us begin the code of the body with step by step methods : -->
+    <!--Step 1 : First we will define the list where new item will be added -->
+    <ul id="editable">
+        <!--This id that we define above for the empty list is used furthe rto link the items . -->
+    </ul>
+    <!--Step 2 : Now we will define form -->
+    <form action="" id="addElement">
+        <!--Step 3 : Now we will define the input method to get the item name from the user  -->
+        <label for="liContent">
+            New List Item : 
+            <input type="text" name="liContent" id="liContent" size="60">
+        </label>
+        <input type="submit" value="Add Item">
+    </form>
+    <!--Step 3 : Now we will add the link to clear the added items -->
+    <p>
+        <a href="#" id="clearList">
+            Clear List <!--This link will clear the list -->
+        </a>
+    </p>
+    <!--Step 4 : Now we will begin to write JavaScript code for the special Slide Up effect . First we will load the Jsquery Script -->
+    <script type="text/javascript" src="jquery.js"></script>
+    <!--Step 5 : Now we will write our sript -->
+    <script type="text/javascript" charset="utf-8">
+        //First we will write the script for adding the content to the list 
+        $("#addElement").submit(function(event){
+            event.preventDefault() ; 
+            $("#editable").append("<li>" + $("#addElement input[name = 'liContent']").val() + "</li>") ;  //This particualr code line will add the new list item to the list when the user clicks on the submit button
+            $("#addElement input[name='liContent']").val() ;  
+        }) ; //The Append() function used will add the new item to the list 
+
+        //Now we will add the code to call slideup() function for the slide-up effect . 
+        $("#clearList").click(function(event){
+            event.preventDefault() ; 
+            $("#editable").slideUp('slow' , function(){
+                $("#editable").empty() ; 
+                $("#editable").show() ;
+            }) ; 
+        }) ; 
+    </script>
+</body>
+</html>

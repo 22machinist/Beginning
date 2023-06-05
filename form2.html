@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating the Attributes Directly</title>
+</head>
+<body>
+    <h1>
+        This file is created to contain the code to directly manipulate the input fields 
+    </h1>
+    <form >
+        <label for="email">
+            Email : 
+        </label>
+        <input type="email" name="email" id="email" value="person@example.com" size="40">
+        <input type="submit" id="emailFormsubmit" disabled>
+    </form>
+    <script src="jquery.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        $(function(){
+            $("input[name='email']").focus(function() {
+                if($(this).val() == "person@example.com") {
+                    $(this).val(" ");
+                    $(this).css("color" , "black") ;
+                }
+            }) ;
+
+            $("input[name='email']").blur(function() {
+                if($(this).val() == "") {
+                    $(this).val("person@example.com");
+                    $(this).css("color" , "#999") ;
+                    $("#emailFormsubmit").attr("disabled", "disabled") ;
+                }
+                else {
+                    $("#emailFormsubmit").removeAttr("disabled");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

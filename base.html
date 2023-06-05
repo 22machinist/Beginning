@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base target="yellow_page"> <!---Added base tag here -->
+    <style>
+        body {
+            background-color: #ff9999;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Parent Window - Red 
+    </h1>
+    <p>
+        <a href="yellow.html">Open</a> <!--No need to include target -->
+        The yellow Page in a new window
+    </p>
+    <p>
+        <a href="blue.html" target="blue_page">Open</a>
+        The Blue page in new window 
+    </p>
+    <p>
+        <a href="green.html">Replace</a>
+        <!--No need to add the target attribute -->
+        the yellow page with the green page 
+    </p>
+</body>
+</html>

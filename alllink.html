@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            All Event Handler Tester File
+        </title>
+    </head>
+    <body>
+        <h1>
+            Testing File
+        </h1>
+        <p>
+            This is a testing file created to test all type of event handlers 
+        </p>
+        <ol>
+            Let's Begin : <br>
+            <br>
+            <li>
+                <a href="google.com" id="link">Google</a>
+            </li>
+            <br>
+            <li>
+                <button id="b1">
+                    Click Me ! 
+                </button>
+            </li>
+            <br>
+            <li>
+                <button id="b2">
+                    Hi ! 
+                </button>
+            </li>
+        </ol>
+        <script type="text/javascript">
+            //Now we will go first for a link 
+            var a1 = document.getElementById("link") ; 
+            //Now we will create the event listening function 
+            function message() {
+                alert("You are going to visit Google") ;
+            };
+            //Now we will link this event listening function to the event listener 
+            a1.onclick = message ; 
+
+            //Now we will go with the button but with the different method 
+            var b1 = document.getElementById("b1") ; 
+            //Now we will directly summarise the event listner with the function 
+            b1.onclick = function() {
+                alert("You CLicked Me ! ")  ; 
+                document.write("Thank You For Clicking Me ! ") ;
+            } ; 
+
+            //Now we will go with other button with the method of addeventlistener 
+            var b2 = document.getElementById("b2") ; 
+            b2.addEventListener("click" , function() {
+                alert("there is a surprise for you !!") ; 
+                document.write("You are a hero my friend  💋!!") ;
+            })
+        </script>
+    </body>
+</html>

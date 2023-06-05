@@ -1,0 +1,140 @@
+<!---
+    This file is created to deal with the code 
+    in which we will hide the given information and will only shown when 
+    the user certainly clicks on the link
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Frequently asked questions 
+    </h1>
+    <div id="Q1">
+        <h2 id="Question1">
+            <a href="#" id="link1">Don't I need a development enviroment to work with JavaScript ?</a>
+        </h2>
+        <div class="Answer">
+            <div id="Answer1">
+                <p>
+                    While having a development environment can greatly enhance your productivity 
+                    and provide helpful tools, it is not strictly necessary to work with JavaScript. 
+                    JavaScript code can be written and executed in a variety of environments,
+                    including web browsers and text editors.
+                </p>
+                <ul>
+                    Here are the few options for working with JavaScript : 
+                    <li>
+                        Web Browsers : <br>
+                        Modern web browsers, such as Google Chrome, Mozilla Firefox, and Microsoft Edge, have built-in developer tools that 
+                        include a JavaScript console. You can open the console by right-clicking on a web page, 
+                        selecting "Inspect" or "Inspect Element," and then navigating to the 
+                        "Console" tab. This allows you to write and execute 
+                        JavaScript code directly in the browser.
+                    </li>
+                    <li>
+                        Text Editors : 
+                        <br>
+                        Text editors like Visual Studio Code, Sublime Text, or Atom provide a lightweight environment for 
+                        writing JavaScript code. You can create a new JavaScript file, write your code, and save it with a 
+                        .js extension. You can then execute the JavaScript file in a web browser or using a JavaScript runtime environment like Node.js.
+                    </li>
+                    <li>
+                        Integrated Development Enviroments (IDEs):
+                        <br>
+                        IDEs are powerful tools that offer comprehensive features 
+                        for coding in various programming languages, including JavaScript. Examples 
+                        of popular JavaScript-focused IDEs include WebStorm, Visual Studio
+                        Code with relevant extensions, and IntelliJ IDEA with JavaScript support. IDEs typically offer advanced features like code completion, debugging, and project management.
+                    </li>
+                    <li>
+                        Online Code Editors : 
+                        <br>
+                        Online platforms like CodePen, JSFiddle, and Replit provide web-based code editors where 
+                        you can write and run JavaScript code directly in your browser. These platforms 
+                        often have built-in features like live previews, collaboration, and sharing capabilities.
+                    </li>
+                </ul>
+                <p id="footer">
+                    Having a dedicated development environment or using specific tools can streamline 
+                    your workflow, facilitate debugging, and offer additional features. However, if you're getting started 
+                    or working on small-scale projects, you can work with JavaScript using basic tools like web browsers 
+                    and text editors.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="Q2">
+        <h2 id="Question2">
+            <a href="#" id="link2">
+                What is AJAX ?
+            </a>
+        </h2>
+        <div class="Answers">
+            <div id="Answer2">
+                <p>
+                    AJAX (Asynchronous JavaScript and XML) is a technique used in web development to 
+                    create asynchronous web applications. It allows for exchanging data with a web server 
+                    in the background, without the need for a full page reload. AJAX combines several technologies, 
+                    including JavaScript, XML (although JSON is more commonly used now), HTML, and CSS.
+                </p>
+                <p>
+                    With AJAX, you can send HTTP requests from a 
+                    web page to a server and receive data in various formats, such as XML, 
+                    JSON, or plain text. The retrieved data can then be dynamically updated on the web 
+                    page without requiring a complete reload. This enables developers to create more interactive and responsive 
+                    web applications, providing a smoother user experience
+                </p>
+                <p>
+                    AJAX has revolutionized web development by enabling dynamic and interactive 
+                    web applications. It is widely used for tasks such as fetching data from a server, 
+                    submitting forms without page refresh, auto-suggest search functionality, real-time updates, and much more.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="Q3">
+        <h2 id="Question3">
+            <a href="#" id="link3">When I use JavaScript , do I need to accodomate users whose browsers may not support JavaScript or who has disabled it ?</a>
+        </h2>
+        <div class="Answers">
+            <div id="Answer3">
+                <p>
+                    Yes, when using JavaScript in web development, it's important to consider users 
+                    who may have browsers that don't support JavaScript or who have intentionally disabled 
+                    JavaScript in their browser settings. By providing fallback options and gracefully handling scenarios 
+                    where JavaScript is unavailable, you can ensure that your website or web application remains functional and accessible to a wider range of users.
+                </p>
+                <ul id="ans3">
+                    Here are few Strategies to accomodate users without JavaScript : 
+                    <li>
+                        Progressive Enhancement : 
+                        <br>
+                        Follow the principle of progressive enhancement, which involves building a baseline experience that works without JavaScript and then adding JavaScript to enhance the user experience. The core functionality should be available even if JavaScript is disabled or unsupported.
+                    </li>
+                    <li>
+                        Graceful Degradation : 
+                        <br>
+                        Take the approach of graceful degradation, where you build your website or web application with JavaScript enhancements, but ensure that it still functions reasonably without JavaScript. Start with a fully functional version and progressively disable or remove JavaScript-dependent features if it's not available.
+                    </li>
+                    <li>
+                        Provide Non-JavaScript Alternatives : 
+                        <br>
+                        Consider providing non-JavaScript alternatives for critical functionality. For example, if you have a form validation mechanism that relies on JavaScript, include server-side validation as a fallback to validate user input. This way, users without JavaScript can still submit valid data.
+                    </li>
+                </ul>
+                <p>
+                    By considering these strategies, you can make your website or web application more inclusive and accessible to users with different browser capabilities and preferences regarding JavaScript usage. It's important to strike a balance between providing a rich user experience with JavaScript and ensuring basic functionality for users without JavaScript support.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="hidejs.js"></script>
+</body>
+</html>

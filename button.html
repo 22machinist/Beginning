@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Color changing button 
+        </title>
+        <style>
+            #b1 {
+                background-color: aqua;
+                width: 100px;
+                height: 100px;
+            }
+            #b1.highlighted {
+                background-color: yellow;
+                width: 120px;
+                height: 120px;
+            }
+            #b2 {
+                background-color: blue;
+                height: 100px;
+                width: 100px;
+            }
+            #b2.highlight {
+                background-color: brown;
+                height: 120px;
+                width: 120px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="b1">
+            click me ! 
+        </button>
+        <br>
+        <button id="b2">
+            Second one ! 
+        </button>
+        <script src="jquery.js">
+        </script>
+        <script>
+            $(function(){
+                $("#b1").mouseenter(function(){
+                    $(this).addClass("highlighted");
+                });
+
+
+                $("#b1").mouseleave(function(){
+                    $(this).removeClass("highlighted");
+                });
+            });
+
+            $(function(){
+                $("#b2").mouseenter(function(){
+                    $(this).addClass("highlight");
+                });
+
+
+                $("#b2").mouseleave(function(){
+                    $(this).removeClass("highlight");
+                });
+            });
+        </script>
+    </body>
+</html>
